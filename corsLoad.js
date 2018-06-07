@@ -34,6 +34,8 @@ var CorsLoadImageModule = (function() {
                 return;
             }
 
+            /* This is required to overcome browser caching of external hosted images */
+            /* related bug: https://bugs.chromium.org/p/chromium/issues/detail?id=409090 */            
             var cacheBustedUrl = url + "?v=" + Date.now();
 
             $.ajax({

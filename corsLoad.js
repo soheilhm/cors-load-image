@@ -22,6 +22,12 @@ var CorsLoadImageModule = (function() {
                 return;
             }
 
+            /* check for jQuery dependency */
+            if (typeof $ === "undefined") {
+                next("jQuery is a required dependency");
+                return;
+            }            
+
             /* Nothing should be done for same origin images */
             if (new URL(url).origin === window.location.origin) {
                 _loadImage(url, next);
@@ -55,15 +61,7 @@ var CorsLoadImageModule = (function() {
                     _loadImage("data:image/png;base64," + btoa(binary), next);
                 },
                 error: function() {
-                    var error =
-                        "The server that is hosting the image does not allow access to this image from your origin.\n";
-                    error +=
-                        "Make sure Access-Control-Allow-Origin header exists and supports your current origin\n";
-                    error +=
-                        "A- If you are loading images from S3, make sure you created a CORS policy for your S3 bucket.\n";
-                    error +=
-                        "B- If you are loading images from your own server, make sure the CORS header is set.";
-                    next(error);
+                    next('The server that is hosting the image does not allow access to this image from your origin.');
                 }
             });
         }

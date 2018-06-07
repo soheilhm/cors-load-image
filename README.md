@@ -13,7 +13,7 @@ _All code is written in ES5, no need for Babel for transpilation_
 
 ---
 ### Usage
-Download the repo and paste it in the same folder as the rest of your project.
+
 ```html
 <!doctype html>
 <html>
@@ -24,8 +24,8 @@ Download the repo and paste it in the same folder as the rest of your project.
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <!-- jQuery Ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- corsLoad source -->
-    <script src="./corsLoad.js"></script>
+    <!-- SCRIPT source -->
+    <script src="https://raw.githubusercontent.com/soheilhm/cors-load-image/master/corsLoad.js"></script>
 </head>
 
 <body>

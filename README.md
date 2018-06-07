@@ -1,6 +1,8 @@
 # cors-load-image
+
 Load Images dynamically to browser as a source that are hosted on external servers.
 This approach is very useful for loading images into a canvas element. (tainted canvas issue)
+
 ---
 ### Notes
 ##### dependecies: 

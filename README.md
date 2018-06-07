@@ -35,8 +35,9 @@ Download the repo and paste it in the same folder as the rest of your project.
 
         var draw = function draw() {
             var ctx = document.getElementById('myCanvas').getContext('2d');
+            var url = 'https://media.gettyimages.com/photos/young-boy-standing-on-a-rocky-outcrop-picture-id841868308';
 
-            CorsLoadImageModule.load('https://media.gettyimages.com/photos/young-boy-standing-on-a-rocky-outcrop-picture-id841868308', function (err, image) {
+            CorsLoadImageModule.load(url, function (err, image) {
                 if (err) {
                     alert(err);
                     return;
